@@ -4,7 +4,8 @@ import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, Users, Award, Edit2, User, X, Trash2 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/authorities";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = `${API_BASE_URL}/api/authorities`;
 
 const OurInspiration = () => {
   const [inspiration, setInspiration] = useState({

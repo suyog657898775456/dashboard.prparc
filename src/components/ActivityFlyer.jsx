@@ -31,7 +31,8 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
-const API_URL = "http://localhost:5000/api/activity-flyers";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = `${API_BASE_URL}/api/activity-flyers`;
 
 // --- Sortable Item Component ---
 const SortableFlyerCard = ({

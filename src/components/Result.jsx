@@ -24,8 +24,8 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
-const API_BASE = "http://localhost:5000/api/results";
-
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = `${API_BASE_URL}/api/results`;
 // --- Sortable Item Component ---
 const SortableResultItem = ({ pdf, startEditing, showDeleteConfirmation }) => {
   const {

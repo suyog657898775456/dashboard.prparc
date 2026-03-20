@@ -10,7 +10,8 @@ import {
   Image as ImageIcon,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/institutes";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = `${API_BASE_URL}/api/institutes`;
 
 const OurInstitutes = () => {
   const [institutes, setInstitutes] = useState([]);

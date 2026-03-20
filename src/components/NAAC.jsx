@@ -36,7 +36,8 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
-const API_URL = "http://localhost:5000/api/naac";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = `${API_BASE_URL}/api/naac`;
 
 // --- Sortable Item Component ---
 const SortableTabItem = ({

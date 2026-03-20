@@ -2,7 +2,8 @@ import React from "react";
 import { MapPin, Phone, Mail, Globe } from "lucide-react";
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/contact";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = `${API_BASE_URL}/api/contact`;
 
 const ContactInfo = ({ contact, setContact, setPendingChanges }) => {
   const handleSave = async () => {
